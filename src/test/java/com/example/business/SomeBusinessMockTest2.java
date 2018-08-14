@@ -17,10 +17,12 @@ import com.example.data.SomeDataService;
 public class SomeBusinessMockTest2 {
 
 	@InjectMocks
-	SomeBusinessImpl business = new SomeBusinessImpl();
+	SomeBusinessImpl business;
+	//SomeBusinessImpl business = new SomeBusinessImpl();
 	
 	@Mock
-	SomeDataService dataServiceMock = mock(SomeDataService.class);
+	SomeDataService dataServiceMock;
+	//SomeDataService dataServiceMock = mock(SomeDataService.class);
 
 	/*
 	@Before
@@ -34,7 +36,7 @@ public class SomeBusinessMockTest2 {
 		when(dataServiceMock.retrieveAllData()).thenReturn(new int[] { 5, 6, 7 });
 		assertEquals(18, business.calculateSumUsingDataService());
 	}
-
+	
 	@Test
 	public void calculateSumUsingDataService_empty() {
 		when(dataServiceMock.retrieveAllData()).thenReturn(new int[] {});

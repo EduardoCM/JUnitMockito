@@ -19,7 +19,7 @@ class SomeDataServiceEmptyStub implements SomeDataService {
 
 	@Override
 	public int[] retrieveAllData() {
-		return new int[] {23};
+		return new int[] {};
 	}
 
 }
